@@ -3,7 +3,36 @@ from streamlit_lottie import st_lottie
 import requests
 import random
 
-# --- PAGE SETUP ---
+
+
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+def login_form():
+    st.title("Login Page")
+    st.info("Safety ka socha, login rakhna pada SAD")
+    username = st.text_input("your insta username")
+    password = st.text_input("your phones password numeric ", type="password")
+    login_button = st.button("Login")
+
+    if login_button:
+        # Replace with your actual validation logic (e.g., database lookup)
+        if username == st.secrets["user"] and password == st.secrets["password"]:
+            st.session_state.logged_in = True
+            st.success("Login successful!")
+            st.rerun()
+            # Optionally redirect to another page
+            # st.switch_page("pages/dashboard.py") 
+        else:
+            st.error("Invalid username or password")
+            #time.sleep(2)
+
+if not st.session_state.logged_in or st.session_state.logged_in==False:
+    login_form()
+    #st.rerun()
+
+if st.session_state.logged_in==False:
+    st.stop()
 st.set_page_config(page_title="Happy Birthday, Kayyycyy!", page_icon="🎂", layout="wide")
 st.balloons()
 # --- HELPER FUNCTIONS ---
