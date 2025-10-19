@@ -49,8 +49,8 @@ def load_json(path):
     return data
 
 # --- LOAD ANIMATIONS ---
-lottie_confetti = load_json(r"animations\confetti.json")
-lottie_dance = load_json(r"animations\dance.json")  # Add a dance/fun animation!
+lottie_confetti = load_json(r"animations/confetti.json")
+lottie_dance = load_json(r"animations/dance.json")  # Add a dance/fun animation!
 #lottie_party = load_json("party.json")  # Another animation if available
 
 # --- HEADER ---
@@ -76,13 +76,13 @@ st.header("🌈 What a Journey this year!")
 st.markdown("""## ACL Recovery  | Exceling in design | Back to Dancing | New Relationship | New Job  
         - Bhaiii sahabb you crushed your 25..!
         """)
-st.image(r"Data\kc.jpg", width=180)
+st.image(r"Data/kc.jpg", width=180)
 with st.expander("# You really came from this ----> this ????"):
     cols = st.columns([1, 1])
     with cols[0]:
-        st.image(r"Data\uthh jaa.jpeg", caption="[10 min aur, mai gir gayii, fighting over waking upss!]! 😴", width=500)
+        st.image(r"Data/uthh jaa.jpeg", caption="[10 min aur, mai gir gayii, fighting over waking upss!]! 😴", width=500)
     with cols[1]:
-        st.image(r"Data\utth gayi.png", caption="Waking up at your sleeping time ✨", width=500)
+        st.image(r"Data/utth gayi.png", caption="Waking up at your sleeping time ✨", width=500)
 #st_lottie(lottie_dance, height=120, key="dance")
 st.divider()
 
@@ -106,7 +106,7 @@ Dont foget to **TAKE FREQUENT BREAKS**. \n
 May your **coffee be strong**, your relationships even stronger!  \n
 **Proud of you always** — till i forget: "WHO'S THIS?" 😉  \n
 """)
-st.image(r"Data\bye.png", width=320)
+st.image(r"Data/bye.png", width=320)
 
 st.divider()
 
@@ -137,7 +137,7 @@ reminders = [
     "Keep the drama alive 🎭",
 ]
 st.markdown("\n".join([f"- {r}" for r in reminders]))
-st.image(r"Data\kick.png", width=220)
+st.image(r"Data/kick.png", width=220)
 st.divider()
 
 # --- CELEBRATION FOOTER ---
